@@ -2,6 +2,16 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.0 (2020-05-01)
+------------------
+* Replace deprecated launch_ros usage (`#84 <https://github.com/ros/ros_tutorials/issues/84>`_)
+* Contributors: Jacob Perron
+
+1.1.1 (2020-04-16)
+------------------
+* catch reference to fix -Wcatch-value warning (`#78 <https://github.com/ros/ros_tutorials/issues/78>`_)
+* Contributors: Mikael Arguedas
+
 1.1.0 (2019-11-12)
 ------------------
 * Eloquent Elusor turtle icon (`#77 <https://github.com/ros/ros_tutorials/issues/77>`_)
