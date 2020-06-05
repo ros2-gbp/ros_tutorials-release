@@ -2,6 +2,11 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.3 (2020-06-05)
+------------------
+* update Foxy turtle (`#90 <https://github.com/ros/ros_tutorials/issues/90>`_)
+* Contributors: Dirk Thomas
+
 1.2.2 (2020-06-03)
 ------------------
 * add Foxy turtle (`#89 <https://github.com/ros/ros_tutorials/issues/89>`_)
