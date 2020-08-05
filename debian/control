@@ -1,0 +1,12 @@
+Source: ros-eloquent-turtlesim
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), qt5-qmake, qtbase5-dev, ros-eloquent-ament-cmake, ros-eloquent-ament-index-cpp, ros-eloquent-geometry-msgs, ros-eloquent-rclcpp, ros-eloquent-rclcpp-action, ros-eloquent-rosidl-default-generators, ros-eloquent-std-msgs, ros-eloquent-std-srvs, ros-eloquent-ros-workspace, ros-eloquent-rosidl-typesupport-connext-c, ros-eloquent-rosidl-typesupport-connext-cpp, ros-eloquent-rosidl-typesupport-fastrtps-c, ros-eloquent-rosidl-typesupport-fastrtps-cpp, ros-eloquent-rmw-connext-cpp, ros-eloquent-rmw-fastrtps-cpp, ros-eloquent-rmw-implementation, ros-eloquent-rmw-opensplice-cpp, ros-eloquent-rosidl-typesupport-opensplice-c, ros-eloquent-rosidl-typesupport-opensplice-cpp
+Homepage: http://www.ros.org/wiki/turtlesim
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-turtlesim
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, ros-eloquent-ament-index-cpp, ros-eloquent-geometry-msgs, ros-eloquent-rclcpp, ros-eloquent-rclcpp-action, ros-eloquent-rosidl-default-runtime, ros-eloquent-std-msgs, ros-eloquent-std-srvs, ros-eloquent-ros-workspace
+Description: turtlesim is a tool made for teaching ROS and ROS packages.
