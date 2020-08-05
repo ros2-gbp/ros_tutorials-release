@@ -2,29 +2,9 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.2.5 (2020-08-05)
+1.1.2 (2020-08-05)
 ------------------
-* add holonomic motion for turtlesim (`#98 <https://github.com/ros/ros_tutorials/issues/98>`_)
-
-1.2.4 (2020-06-12)
-------------------
-* add step value to turtlesim color parameters (`#91 <https://github.com/ros/ros_tutorials/issues/91>`_)
-
-1.2.3 (2020-06-05)
-------------------
-* update Foxy turtle (`#90 <https://github.com/ros/ros_tutorials/issues/90>`_)
-
-1.2.2 (2020-06-03)
-------------------
-* add Foxy turtle (`#89 <https://github.com/ros/ros_tutorials/issues/89>`_)
-
-1.2.1 (2020-06-02)
-------------------
-* Fix Qt deprecation warning (`#88 <https://github.com/ros/ros_tutorials/issues/88>`_)
-
-1.2.0 (2020-05-01)
-------------------
-* Replace deprecated launch_ros usage (`#84 <https://github.com/ros/ros_tutorials/issues/84>`_)
+* add holonomic motion for turtlesim (foxy) (`#98 <https://github.com/ros/ros_tutorials/issues/98>`_)
 
 1.1.1 (2020-04-16)
 ------------------
