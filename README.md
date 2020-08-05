@@ -1,3 +1,26 @@
+## turtlesim (eloquent) - 1.1.2-1
+
+The packages in the `turtlesim` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release -r eloquent -t eloquent turtlesim` on `Wed, 05 Aug 2020 15:47:06 -0000`
+
+The `turtlesim` package was released.
+
+Version of package(s) in repository `turtlesim`:
+
+- upstream repository: https://github.com/ros/ros_tutorials.git
+- release repository: https://github.com/ros2-gbp/ros_tutorials-release.git
+- rosdistro version: `1.1.0-1`
+- old version: `1.1.0-1`
+- new version: `1.1.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## turtlesim (foxy) - 1.2.5-1
 
 The packages in the `turtlesim` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy -t foxy turtlesim` on `Wed, 05 Aug 2020 15:44:49 -0000`
