@@ -1,0 +1,12 @@
+Source: ros-dashing-turtlesim
+Section: misc
+Priority: optional
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), qt5-qmake, qtbase5-dev, ros-dashing-ament-cmake, ros-dashing-ament-index-cpp, ros-dashing-geometry-msgs, ros-dashing-rclcpp, ros-dashing-rclcpp-action, ros-dashing-rosidl-default-generators, ros-dashing-std-msgs, ros-dashing-std-srvs, ros-dashing-ros-workspace, ros-dashing-rosidl-typesupport-connext-c, ros-dashing-rosidl-typesupport-connext-cpp, ros-dashing-rosidl-typesupport-fastrtps-c, ros-dashing-rosidl-typesupport-fastrtps-cpp, ros-dashing-rmw-connext-cpp, ros-dashing-rmw-fastrtps-cpp, ros-dashing-rmw-implementation, ros-dashing-rmw-opensplice-cpp, ros-dashing-rosidl-typesupport-opensplice-c, ros-dashing-rosidl-typesupport-opensplice-cpp
+Homepage: http://www.ros.org/wiki/turtlesim
+Standards-Version: 3.9.2
+
+Package: ros-dashing-turtlesim
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, ros-dashing-ament-index-cpp, ros-dashing-geometry-msgs, ros-dashing-rclcpp, ros-dashing-rclcpp-action, ros-dashing-rosidl-default-runtime, ros-dashing-std-msgs, ros-dashing-std-srvs, ros-dashing-ros-workspace
+Description: turtlesim is a tool made for teaching ROS and ROS packages.
