@@ -62,6 +62,7 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr& node_handle, QWidget* parent, 
   nh_ = node_handle;
   rcl_interfaces::msg::IntegerRange range;
   range.from_value = 0;
+  range.step = 1;
   range.to_value = 255;
   rcl_interfaces::msg::ParameterDescriptor background_r_descriptor;
   background_r_descriptor.description = "Red channel of the background color";
@@ -81,6 +82,8 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr& node_handle, QWidget* parent, 
   turtles.append("bouncy.png");
   turtles.append("crystal.png");
   turtles.append("dashing.png");
+  turtles.append("eloquent.png");
+  turtles.append("foxy.png");
 
   QString images_path = (ament_index_cpp::get_package_share_directory("turtlesim") + "/images/").c_str();
   for (int i = 0; i < turtles.size(); ++i)
