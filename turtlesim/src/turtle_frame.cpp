@@ -107,7 +107,7 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr& node_handle, QWidget* parent, 
   parameter_event_sub_ = nh_->create_subscription<rcl_interfaces::msg::ParameterEvent>(
     "/parameter_events", qos, std::bind(&TurtleFrame::parameterEventCallback, this, std::placeholders::_1));
 
-  RCLCPP_INFO(nh_->get_logger(), "Starting turtlesim with node name %s", nh_->get_node_names()[0].c_str());
+  RCLCPP_INFO(nh_->get_logger(), "Starting turtlesim with node name %s", nh_->get_fully_qualified_name());
 
   width_in_meters_ = (width() - 1) / meter_;
   height_in_meters_ = (height() - 1) / meter_;
@@ -160,12 +160,12 @@ bool TurtleFrame::killCallback(const turtlesim::srv::Kill::Request::SharedPtr re
   return true;
 }
 
-void TurtleFrame::parameterEventCallback(const rcl_interfaces::msg::ParameterEvent::SharedPtr event)
+void TurtleFrame::parameterEventCallback(const rcl_interfaces::msg::ParameterEvent::ConstSharedPtr event)
 {
   // only consider events from this node
   if (event->node == nh_->get_fully_qualified_name())
   {
-    // since parameter events for this even aren't expected frequently just always call update()
+    // since parameter events for this event aren't expected frequently just always call update()
     update();
   }
 }
