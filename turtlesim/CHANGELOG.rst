@@ -2,6 +2,20 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.4.0 (2021-11-18)
+------------------
+* Update maintainers to Audrow Nash and Michael Jeronimo (`#137 <https://github.com/ros/ros_tutorials/issues/137>`_)
+* Fixing deprecated subscriber callback warnings (`#134 <https://github.com/ros/ros_tutorials/issues/134>`_)
+* Use rosidl_get_typesupport_target() (`#132 <https://github.com/ros/ros_tutorials/issues/132>`_)
+* Print out the correct node name on startup. (`#122 <https://github.com/ros/ros_tutorials/issues/122>`_)
+* Contributors: Abrar Rahman Protyasha, Audrow Nash, Chris Lalancette, Shane Loretz
+
+1.3.3 (2021-05-21)
+------------------
+* Added galactic turtle icon. (`#123 <https://github.com/ros/ros_tutorials/issues/123>`_)
+* Heavily cleanup teleop_turtle_key. (`#121 <https://github.com/ros/ros_tutorials/issues/121>`_)
+* Contributors: Chris Lalancette, Katherine Scott
+
 1.3.2 (2021-04-16)
 ------------------
 * Ignore key up events in teleop_turtle_key on Windows (`#118 <https://github.com/ros/ros_tutorials/issues/118>`_)
