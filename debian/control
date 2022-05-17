@@ -1,0 +1,12 @@
+Source: ros-humble-turtlesim
+Section: misc
+Priority: optional
+Maintainer: Audrow Nash <audrow@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), qt5-qmake, qtbase5-dev, ros-humble-ament-cmake, ros-humble-ament-index-cpp, ros-humble-geometry-msgs, ros-humble-rclcpp, ros-humble-rclcpp-action, ros-humble-rosidl-default-generators, ros-humble-std-msgs, ros-humble-std-srvs, ros-humble-ros-workspace, ros-humble-rosidl-typesupport-fastrtps-c, ros-humble-rosidl-typesupport-fastrtps-cpp
+Homepage: http://www.ros.org/wiki/turtlesim
+Standards-Version: 3.9.2
+
+Package: ros-humble-turtlesim
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, ros-humble-ament-index-cpp, ros-humble-geometry-msgs, ros-humble-rclcpp, ros-humble-rclcpp-action, ros-humble-rosidl-default-runtime, ros-humble-std-msgs, ros-humble-std-srvs, ros-humble-ros-workspace
+Description: turtlesim is a tool made for teaching ROS and ROS packages.
