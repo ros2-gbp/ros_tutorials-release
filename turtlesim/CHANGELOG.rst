@@ -2,10 +2,24 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.3.4 (2022-04-28)
+1.4.2 (2022-05-17)
 ------------------
+* Add humble turtle (`#140 <https://github.com/ros/ros_tutorials/issues/140>`_)
+* Contributors: Audrow Nash
+
+1.4.1 (2022-01-14)
+------------------
+* Use ``double`` when handling ``qreal orient\_`` (`#114 <https://github.com/ros/ros_tutorials/issues/114>`_)
+* Add Rolling Icon (`#133 <https://github.com/ros/ros_tutorials/issues/133>`_)
+* Contributors: Katherine Scott, Seulbae Kim
+
+1.4.0 (2021-11-18)
+------------------
+* Update maintainers to Audrow Nash and Michael Jeronimo (`#137 <https://github.com/ros/ros_tutorials/issues/137>`_)
+* Fixing deprecated subscriber callback warnings (`#134 <https://github.com/ros/ros_tutorials/issues/134>`_)
+* Use rosidl_get_typesupport_target() (`#132 <https://github.com/ros/ros_tutorials/issues/132>`_)
 * Print out the correct node name on startup. (`#122 <https://github.com/ros/ros_tutorials/issues/122>`_)
-* Contributors: Chris Lalancette
+* Contributors: Abrar Rahman Protyasha, Audrow Nash, Chris Lalancette, Shane Loretz
 
 1.3.3 (2021-05-21)
 ------------------

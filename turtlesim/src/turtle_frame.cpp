@@ -85,6 +85,8 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr& node_handle, QWidget* parent, 
   turtles.append("eloquent.png");
   turtles.append("foxy.png");
   turtles.append("galactic.png");
+  turtles.append("humble.png");
+  turtles.append("rolling.png");
 
   QString images_path = (ament_index_cpp::get_package_share_directory("turtlesim") + "/images/").c_str();
   for (int i = 0; i < turtles.size(); ++i)
@@ -160,12 +162,12 @@ bool TurtleFrame::killCallback(const turtlesim::srv::Kill::Request::SharedPtr re
   return true;
 }
 
-void TurtleFrame::parameterEventCallback(const rcl_interfaces::msg::ParameterEvent::SharedPtr event)
+void TurtleFrame::parameterEventCallback(const rcl_interfaces::msg::ParameterEvent::ConstSharedPtr event)
 {
   // only consider events from this node
   if (event->node == nh_->get_fully_qualified_name())
   {
-    // since parameter events for this even aren't expected frequently just always call update()
+    // since parameter events for this event aren't expected frequently just always call update()
     update();
   }
 }
