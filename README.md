@@ -1,3 +1,26 @@
+## turtlesim (rolling) - 1.5.0-1
+
+The packages in the `turtlesim` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling turtlesim` on `Tue, 13 Sep 2022 21:39:45 -0000`
+
+The `turtlesim` package was released.
+
+Version of package(s) in repository `turtlesim`:
+
+- upstream repository: https://github.com/ros/ros_tutorials.git
+- release repository: https://github.com/ros2-gbp/ros_tutorials-release.git
+- rosdistro version: `1.4.1-2`
+- old version: `1.4.1-2`
+- new version: `1.5.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.1`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## turtlesim (foxy) - 1.2.6-1
 
 The packages in the `turtlesim` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy turtlesim` on `Fri, 22 Jul 2022 23:00:19 -0000`
