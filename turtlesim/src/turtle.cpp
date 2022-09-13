@@ -41,7 +41,7 @@
 namespace turtlesim
 {
 
-static float normalizeAngle(float angle)
+static double normalizeAngle(double angle)
 {
   return angle - (TWO_PI * std::floor((angle + PI) / (TWO_PI)));
 }
@@ -88,11 +88,16 @@ Turtle::Turtle(rclcpp::Node::SharedPtr& nh, const std::string& real_name, const 
 }
 
 
-void Turtle::velocityCallback(const geometry_msgs::msg::Twist::SharedPtr vel)
+void Turtle::velocityCallback(const geometry_msgs::msg::Twist::ConstSharedPtr vel)
 {
   last_command_time_ = nh_->now();
   lin_vel_x_ = vel->linear.x;
-  lin_vel_y_ = vel->linear.y;
+  bool holonomic = false;
+  nh_->get_parameter_or("holonomic", holonomic, false);
+  if (holonomic)
+  {
+    lin_vel_y_ = vel->linear.y;
+  }
   ang_vel_ = vel->angular.z;
 
   // Abort any active action
@@ -206,8 +211,8 @@ bool Turtle::update(double dt, QPainter& path_painter, const QImage& path_image,
     }
     else
     {
-      float theta = normalizeAngle(rotate_absolute_goal_handle_->get_goal()->theta);
-      float remaining = normalizeAngle(theta - static_cast<float>(orient_));
+      double theta = normalizeAngle(rotate_absolute_goal_handle_->get_goal()->theta);
+      double remaining = normalizeAngle(theta - static_cast<float>(orient_));
 
       // Update result
       rotate_absolute_result_->delta = normalizeAngle(static_cast<float>(rotate_absolute_start_orient_ - orient_));
