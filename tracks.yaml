@@ -148,4 +148,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros/ros_tutorials.git
-    version: :{auto}
+    version: 1.6.0
+    version_saved: :{auto}
