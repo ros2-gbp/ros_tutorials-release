@@ -148,8 +148,7 @@ tracks:
     ros_distro: iron
     vcs_type: git
     vcs_uri: https://github.com/ros/ros_tutorials.git
-    version: 1.6.0
-    version_saved: :{auto}
+    version: :{auto}
   rolling:
     actions:
     - bloom-export-upstream :{vcs_local_uri} :{vcs_type} --tag :{release_tag} --display-uri
