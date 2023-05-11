@@ -79,7 +79,6 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr& node_handle, QWidget* parent, 
 
   rcl_interfaces::msg::ParameterDescriptor holonomic_descriptor;
   holonomic_descriptor.description = "If true, then turtles will be holonomic";
-  holonomic_descriptor.integer_range.push_back(range);
   nh_->declare_parameter("holonomic", rclcpp::ParameterValue(false), holonomic_descriptor);
 
   QVector<QString> turtles;
@@ -91,6 +90,7 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr& node_handle, QWidget* parent, 
   turtles.append("foxy.png");
   turtles.append("galactic.png");
   turtles.append("humble.png");
+  turtles.append("iron.png");
   turtles.append("rolling.png");
 
   QString images_path = (ament_index_cpp::get_package_share_directory("turtlesim") + "/images/").c_str();
