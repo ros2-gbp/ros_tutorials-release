@@ -138,7 +138,7 @@ tracks:
       :{release_inc} --os-name fedora
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc} --os-name rhel
-    devel_branch: rolling
+    devel_branch: iron
     last_version: 1.6.0
     name: upstream
     patches: null
