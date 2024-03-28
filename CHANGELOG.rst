@@ -2,6 +2,11 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.8.2 (2024-03-28)
+------------------
+* Shorten the callback definition for uncrustify. (`#163 <https://github.com/ros/ros_tutorials/issues/163>`_)
+* Contributors: Chris Lalancette
+
 1.8.1 (2024-01-24)
 ------------------
 * Use same QoS for all topic pub/subs (`#161 <https://github.com/ros/ros_tutorials/issues/161>`_)
