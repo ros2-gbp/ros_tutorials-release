@@ -2,6 +2,18 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.8.3 (2024-05-13)
+------------------
+* Add icon for Jazzy. (`#167 <https://github.com/ros/ros_tutorials/issues/167>`_) (`#168 <https://github.com/ros/ros_tutorials/issues/168>`_)
+  (cherry picked from commit 014955e15a6ac3b1649cbf21e11c8547ebd47af7)
+  Co-authored-by: Marco A. Gutierrez <marcogg@marcogg.com>
+* [teleop_turtle_key] update usage string to match keys captured by keyboard (`#165 <https://github.com/ros/ros_tutorials/issues/165>`_) (`#166 <https://github.com/ros/ros_tutorials/issues/166>`_)
+  On windows it will stay uppercase but shouldn't impact users compared to
+  current situation
+  (cherry picked from commit e2853cac87f0c62db6294e5bc351e5b52fcd1ae1)
+  Co-authored-by: Mikael Arguedas <mikael.arguedas@gmail.com>
+* Contributors: mergify[bot]
+
 1.8.2 (2024-03-28)
 ------------------
 * Shorten the callback definition for uncrustify. (`#163 <https://github.com/ros/ros_tutorials/issues/163>`_)
