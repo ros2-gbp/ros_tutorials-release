@@ -2,6 +2,11 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.2 (2024-07-09)
+------------------
+* Create turtlesim_msgs (`#169 <https://github.com/ros/ros_tutorials/issues/169>`_)
+* Contributors: Alejandro Hernández Cordero
+
 1.9.1 (2024-06-17)
 ------------------
 * Add icon for Jazzy. (`#167 <https://github.com/ros/ros_tutorials/issues/167>`_)
