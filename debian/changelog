@@ -1,0 +1,8 @@
+ros-kilted-turtlesim-msgs (1.9.2-2bookworm) bookworm; urgency=high
+
+  * Create turtlesim_msgs (#169 <https://github.com/ros/ros_tutorials/issues/169>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 09 Jul 2024 05:00:00 -0000
+
+
