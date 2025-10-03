@@ -2,93 +2,15 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.10.2 (2025-10-03)
--------------------
-* get rid of deprecated rclcpp::spin_some() (`#183 <https://github.com/ros/ros_tutorials/issues/183>`_)
-* Contributors: Alejandro Hernández Cordero
-
-1.10.1 (2025-05-26)
--------------------
-* Support Qt6 (`#170 <https://github.com/ros/ros_tutorials/issues/170>`_)
-* Add icon for Kilted Kaiju (`#180 <https://github.com/ros/ros_tutorials/issues/180>`_)
-* Contributors: Alejandro Hernández Cordero, Scott K Logan
-
-1.10.0 (2025-04-25)
--------------------
-
-1.9.2 (2024-07-09)
+1.4.3 (2022-10-03)
 ------------------
-* Create turtlesim_msgs (`#169 <https://github.com/ros/ros_tutorials/issues/169>`_)
-* Contributors: Alejandro Hernández Cordero
+* Update draw_square.cpp (`#174 <https://github.com/ros/ros_tutorials/issues/174>`_)
+* Contributors: Bass Builder
 
-1.9.1 (2024-06-17)
+1.4.2 (2022-05-17)
 ------------------
-* Add icon for Jazzy. (`#167 <https://github.com/ros/ros_tutorials/issues/167>`_)
-* [teleop_turtle_key] update usage string to match keys captured by keyboard (`#165 <https://github.com/ros/ros_tutorials/issues/165>`_)
-* Contributors: Marco A. Gutierrez, Mikael Arguedas
-
-1.9.0 (2024-04-26)
-------------------
-
-1.8.2 (2024-03-28)
-------------------
-* Shorten the callback definition for uncrustify. (`#163 <https://github.com/ros/ros_tutorials/issues/163>`_)
-* Contributors: Chris Lalancette
-
-1.8.1 (2024-01-24)
-------------------
-* Use same QoS for all topic pub/subs (`#161 <https://github.com/ros/ros_tutorials/issues/161>`_)
-* Contributors: Yadu
-
-1.8.0 (2023-12-26)
-------------------
-* Remove all uses of ament_target_dependencies. (`#159 <https://github.com/ros/ros_tutorials/issues/159>`_)
-* Contributors: Chris Lalancette
-
-1.7.4 (2023-10-04)
-------------------
-* Crop galactic.png and rolling.png to 45x45. (`#158 <https://github.com/ros/ros_tutorials/issues/158>`_)
-* Contributors: Jason O'Kane
-
-1.7.3 (2023-09-07)
-------------------
-* Remove the unused member variable last_state\_ (`#156 <https://github.com/ros/ros_tutorials/issues/156>`_)
-* Contributors: Chris Lalancette
-
-1.7.2 (2023-06-05)
-------------------
-* Added common tests (`#154 <https://github.com/ros/ros_tutorials/issues/154>`_)
-* Heavy cleanup of the draw_square tutorial. (`#152 <https://github.com/ros/ros_tutorials/issues/152>`_)
-  * Heavy cleanup of the draw_square tutorial.
-  In particular:
-  1. Make it conform to the current ROS 2 style.
-  2. Add in copyright information.
-  3. Refactor the entire code into a class, which tidies it
-  up quite a bit and removes a bunch of globals.
-  4. Make sure to wait for the reset to complete before trying
-  to move the turtle.
-* Contributors: Alejandro Hernández Cordero, Chris Lalancette
-
-1.7.1 (2023-05-11)
-------------------
-* Remove the range constraints from the holonomic parameter. (`#150 <https://github.com/ros/ros_tutorials/issues/150>`_)
-* Add icon (`#148 <https://github.com/ros/ros_tutorials/issues/148>`_)
-* Contributors: Chris Lalancette, Yadu
-
-1.7.0 (2023-04-28)
-------------------
-
-1.6.0 (2023-02-14)
-------------------
-* Update turtlesim to C++17. (`#146 <https://github.com/ros/ros_tutorials/issues/146>`_)
-* [rolling] Update maintainers - 2022-11-07 (`#145 <https://github.com/ros/ros_tutorials/issues/145>`_)
-* Contributors: Audrow Nash, Chris Lalancette
-
-1.5.0 (2022-09-13)
-------------------
-* Add parameter to enable holonomic motion (`#131 <https://github.com/ros/ros_tutorials/issues/131>`_)
 * Add humble turtle (`#140 <https://github.com/ros/ros_tutorials/issues/140>`_)
-* Contributors: Audrow Nash, Daisuke Sato
+* Contributors: Audrow Nash
 
 1.4.1 (2022-01-14)
 ------------------
