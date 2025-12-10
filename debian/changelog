@@ -1,0 +1,34 @@
+ros-rolling-turtlesim-msgs (1.10.3-1bookworm) bookworm; urgency=high
+
+  * fix: swap action and message file group names in CMakeLists.txt (#186 <https://github.com/ros/ros_tutorials/issues/186>) (#187 <https://github.com/ros/ros_tutorials/issues/187>)
+  * Contributors: mergify[bot]
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 09 Dec 2025 23:00:00 -0000
+
+ros-rolling-turtlesim-msgs (1.10.2-1bookworm) bookworm; urgency=high
+
+  * fix cmake deprecation (#182 <https://github.com/ros/ros_tutorials/issues/182>)
+  * Contributors: mosfet80
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 02 Oct 2025 22:00:00 -0000
+
+ros-rolling-turtlesim-msgs (1.10.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 25 May 2025 22:00:00 -0000
+
+ros-rolling-turtlesim-msgs (1.10.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 24 Apr 2025 22:00:00 -0000
+
+ros-rolling-turtlesim-msgs (1.9.2-1bookworm) bookworm; urgency=high
+
+  * Create turtlesim_msgs (#169 <https://github.com/ros/ros_tutorials/issues/169>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 08 Jul 2024 22:00:00 -0000
+
+
