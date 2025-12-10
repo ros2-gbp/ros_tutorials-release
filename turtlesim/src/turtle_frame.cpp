@@ -70,8 +70,6 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr & node_handle, QWidget * parent
   connect(update_timer_, SIGNAL(timeout()), this, SLOT(onUpdate()));
 
   nh_ = node_handle;
-  executor_.add_node(nh_);
-
   rcl_interfaces::msg::IntegerRange range;
   range.from_value = 0;
   range.step = 1;
@@ -269,7 +267,7 @@ void TurtleFrame::onUpdate()
     return;
   }
 
-  executor_.spin_some();
+  rclcpp::spin_some(nh_);
 
   updateTurtles();
 }

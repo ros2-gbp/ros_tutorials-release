@@ -2,22 +2,13 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.10.3 (2025-12-10)
--------------------
+1.9.4 (2025-12-10)
+------------------
 
-1.10.2 (2025-10-03)
--------------------
-* get rid of deprecated rclcpp::spin_some() (`#183 <https://github.com/ros/ros_tutorials/issues/183>`_)
-* Contributors: Alejandro Hernández Cordero
-
-1.10.1 (2025-05-26)
--------------------
-* Support Qt6 (`#170 <https://github.com/ros/ros_tutorials/issues/170>`_)
-* Add icon for Kilted Kaiju (`#180 <https://github.com/ros/ros_tutorials/issues/180>`_)
-* Contributors: Alejandro Hernández Cordero, Scott K Logan
-
-1.10.0 (2025-04-25)
--------------------
+1.9.3 (2025-05-20)
+------------------
+* Add icon for Kilted Kaiju (`#181 <https://github.com/ros/ros_tutorials/issues/181>`_)
+* Contributors: Scott K Logan
 
 1.9.2 (2024-07-09)
 ------------------
