@@ -70,6 +70,8 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr & node_handle, QWidget * parent
   connect(update_timer_, SIGNAL(timeout()), this, SLOT(onUpdate()));
 
   nh_ = node_handle;
+  executor_.add_node(nh_);
+
   rcl_interfaces::msg::IntegerRange range;
   range.from_value = 0;
   range.step = 1;
@@ -111,8 +113,12 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr & node_handle, QWidget * parent
   turtles.append("kilted.png");
   turtles.append("rolling.png");
 
-  QString images_path =
-    (ament_index_cpp::get_package_share_directory("turtlesim") + "/images/").c_str();
+  std::filesystem::path path_tutlesim_images("turtlesim");
+  path_tutlesim_images /= "images";
+  std::filesystem::path images_path_p;
+  ament_index_cpp::get_package_share_directory(path_tutlesim_images.string(), images_path_p);
+
+  QString images_path = images_path_p.string().c_str();
   for (int i = 0; i < turtles.size(); ++i) {
     QImage img;
     img.load(images_path + turtles[i]);
@@ -267,7 +273,7 @@ void TurtleFrame::onUpdate()
     return;
   }
 
-  rclcpp::spin_some(nh_);
+  executor_.spin_some();
 
   updateTurtles();
 }
