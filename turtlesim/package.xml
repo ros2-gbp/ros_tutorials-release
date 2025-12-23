@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>turtlesim</name>
-  <version>1.10.3</version>
+  <version>1.10.4</version>
   <description>
     turtlesim is a tool made for teaching ROS and ROS packages.
   </description>
@@ -22,13 +22,12 @@
   <author email="michael.jeronimo@openrobotics.org">Michael Jeronimo</author>
   <author email="sloretz@openrobotics.org">Shane Loretz</author>
 
-  <build_depend>qt5-qmake</build_depend>
-  <build_depend>qtbase5-dev</build_depend>
+  <build_depend>qt6-base-dev</build_depend>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <exec_depend>libqt5-core</exec_depend>
-  <exec_depend>libqt5-gui</exec_depend>
+  <exec_depend>libqt6-core</exec_depend>
+  <exec_depend>libqt6gui6t64</exec_depend>
 
   <depend>ament_index_cpp</depend>
   <depend>geometry_msgs</depend>
