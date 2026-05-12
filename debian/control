@@ -1,0 +1,12 @@
+Source: ros-lyrical-turtlesim
+Section: misc
+Priority: optional
+Maintainer: "Alejandro Hernandez Cordero" <alejandro@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), qt6-base-dev, ros-lyrical-ament-cmake, ros-lyrical-ament-index-cpp, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-ament-lint-common <!nocheck>, ros-lyrical-geometry-msgs, ros-lyrical-rclcpp, ros-lyrical-rclcpp-action, ros-lyrical-std-msgs, ros-lyrical-std-srvs, ros-lyrical-turtlesim-msgs, ros-lyrical-ros-workspace
+Homepage: http://www.ros.org/wiki/turtlesim
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-turtlesim
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt6core6t64, libqt6gui6, ros-lyrical-ament-index-cpp, ros-lyrical-geometry-msgs, ros-lyrical-rclcpp, ros-lyrical-rclcpp-action, ros-lyrical-std-msgs, ros-lyrical-std-srvs, ros-lyrical-turtlesim-msgs, ros-lyrical-ros-workspace
+Description: turtlesim is a tool made for teaching ROS and ROS packages.
