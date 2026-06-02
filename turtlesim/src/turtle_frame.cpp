@@ -35,15 +35,14 @@
 #include <functional>
 #include <string>
 
-#include "ament_index_cpp/get_package_share_path.hpp"
 #include "rcl_interfaces/msg/integer_range.hpp"
 #include "rcl_interfaces/msg/parameter_descriptor.hpp"
 #include "rcl_interfaces/msg/parameter_event.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "std_srvs/srv/empty.hpp"
 
-#include "turtlesim_msgs/srv/kill.hpp"
-#include "turtlesim_msgs/srv/spawn.hpp"
+#include "turtlesim/srv/kill.hpp"
+#include "turtlesim/srv/spawn.hpp"
 
 #define DEFAULT_BG_R 0x45
 #define DEFAULT_BG_G 0x56
@@ -71,8 +70,6 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr & node_handle, QWidget * parent
   connect(update_timer_, SIGNAL(timeout()), this, SLOT(onUpdate()));
 
   nh_ = node_handle;
-  executor_.add_node(nh_);
-
   rcl_interfaces::msg::IntegerRange range;
   range.from_value = 0;
   range.step = 1;
@@ -111,16 +108,10 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr & node_handle, QWidget * parent
   turtles.append("humble.png");
   turtles.append("iron.png");
   turtles.append("jazzy.png");
-  turtles.append("kilted.png");
-  turtles.append("lyrical.png");
   turtles.append("rolling.png");
 
-  std::filesystem::path path_tutlesim_images("turtlesim");
-  std::filesystem::path images_path_p;
-  images_path_p = ament_index_cpp::get_package_share_path(path_tutlesim_images.string()) /
-    "images" / "";
-
-  QString images_path = images_path_p.string().c_str();
+  QString images_path =
+    (ament_index_cpp::get_package_share_directory("turtlesim") + "/images/").c_str();
   for (int i = 0; i < turtles.size(); ++i) {
     QImage img;
     img.load(images_path + turtles[i]);
@@ -140,11 +131,11 @@ TurtleFrame::TurtleFrame(rclcpp::Node::SharedPtr & node_handle, QWidget * parent
     "reset",
     std::bind(&TurtleFrame::resetCallback, this, std::placeholders::_1, std::placeholders::_2));
   spawn_srv_ =
-    nh_->create_service<turtlesim_msgs::srv::Spawn>(
+    nh_->create_service<turtlesim::srv::Spawn>(
     "spawn",
     std::bind(&TurtleFrame::spawnCallback, this, std::placeholders::_1, std::placeholders::_2));
   kill_srv_ =
-    nh_->create_service<turtlesim_msgs::srv::Kill>(
+    nh_->create_service<turtlesim::srv::Kill>(
     "kill",
     std::bind(&TurtleFrame::killCallback, this, std::placeholders::_1, std::placeholders::_2));
 
@@ -179,8 +170,8 @@ TurtleFrame::~TurtleFrame()
 }
 
 bool TurtleFrame::spawnCallback(
-  const turtlesim_msgs::srv::Spawn::Request::SharedPtr req,
-  turtlesim_msgs::srv::Spawn::Response::SharedPtr res)
+  const turtlesim::srv::Spawn::Request::SharedPtr req,
+  turtlesim::srv::Spawn::Response::SharedPtr res)
 {
   std::string name = spawnTurtle(req->name, req->x, req->y, req->theta);
   if (name.empty()) {
@@ -194,8 +185,8 @@ bool TurtleFrame::spawnCallback(
 }
 
 bool TurtleFrame::killCallback(
-  const turtlesim_msgs::srv::Kill::Request::SharedPtr req,
-  turtlesim_msgs::srv::Kill::Response::SharedPtr)
+  const turtlesim::srv::Kill::Request::SharedPtr req,
+  turtlesim::srv::Kill::Response::SharedPtr)
 {
   M_Turtle::iterator it = turtles_.find(req->name);
   if (it == turtles_.end()) {
@@ -275,7 +266,7 @@ void TurtleFrame::onUpdate()
     return;
   }
 
-  executor_.spin_some();
+  rclcpp::spin_some(nh_);
 
   updateTurtles();
 }
