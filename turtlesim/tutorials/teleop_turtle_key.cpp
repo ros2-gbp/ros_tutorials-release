@@ -28,14 +28,16 @@
 #include <signal.h>
 #include <stdio.h>
 
+#include <atomic>
 #include <functional>
 #include <stdexcept>
+#include <stop_token>  // NOLINT(build/include_order)
 #include <thread>
 
 #include <rclcpp/rclcpp.hpp>
 #include <rclcpp_action/rclcpp_action.hpp>
 #include <geometry_msgs/msg/twist.hpp>
-#include <turtlesim/action/rotate_absolute.hpp>
+#include <turtlesim_msgs/action/rotate_absolute.hpp>
 
 #ifdef _WIN32
 # include <windows.h>  // NO LINT
@@ -61,7 +63,7 @@ static constexpr char KEYCODE_R = 0x72;
 static constexpr char KEYCODE_T = 0x74;
 static constexpr char KEYCODE_V = 0x76;
 
-bool running = true;
+std::atomic<bool> running = true;
 
 class KeyboardReader final
 {
@@ -191,7 +193,7 @@ public:
     twist_pub_ = nh_->create_publisher<geometry_msgs::msg::Twist>(
       "turtle1/cmd_vel",
       turtlesim::topic_qos());
-    rotate_absolute_client_ = rclcpp_action::create_client<turtlesim::action::RotateAbsolute>(
+    rotate_absolute_client_ = rclcpp_action::create_client<turtlesim_msgs::action::RotateAbsolute>(
       nh_,
       "turtle1/rotate_absolute");
   }
@@ -200,7 +202,17 @@ public:
   {
     char c;
 
-    std::thread{std::bind(&TeleopTurtle::spin, this)}.detach();
+    // Spin the node on a background thread. std::jthread joins automatically
+    // when keyLoop() returns, and the stop_token cancels the executor cleanly,
+    // so the spinner is guaranteed to have stopped touching the node before it
+    // is destroyed
+    std::jthread spin_thread(
+      [this](std::stop_token stop_token) {
+        rclcpp::executors::SingleThreadedExecutor executor;
+        executor.add_node(nh_);
+        std::stop_callback cancel_on_stop(stop_token, [&executor]() {executor.cancel();});
+        executor.spin();
+      });
 
     puts("Reading from keyboard");
     puts("---------------------------");
@@ -298,14 +310,9 @@ public:
   }
 
 private:
-  void spin()
-  {
-    rclcpp::spin(nh_);
-  }
-
   void sendGoal(float theta)
   {
-    using Rotate = turtlesim::action::RotateAbsolute;
+    using Rotate = turtlesim_msgs::action::RotateAbsolute;
     auto goal = Rotate::Goal();
     goal.theta = theta;
     auto send_goal_options = rclcpp_action::Client<Rotate>::SendGoalOptions();
@@ -332,8 +339,8 @@ private:
 
   rclcpp::Node::SharedPtr nh_;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr twist_pub_;
-  rclcpp_action::Client<turtlesim::action::RotateAbsolute>::SharedPtr rotate_absolute_client_;
-  rclcpp_action::ClientGoalHandle<turtlesim::action::RotateAbsolute>::SharedPtr goal_handle_;
+  rclcpp_action::Client<turtlesim_msgs::action::RotateAbsolute>::SharedPtr rotate_absolute_client_;
+  rclcpp_action::ClientGoalHandle<turtlesim_msgs::action::RotateAbsolute>::SharedPtr goal_handle_;
 
   KeyboardReader input_;
 };

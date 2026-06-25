@@ -2,20 +2,77 @@
 Changelog for package turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.8.4 (2026-06-02)
-------------------
+1.11.2 (2026-06-25)
+-------------------
+* replace detached spin thread with std::jthread (`#200 <https://github.com/ros/ros_tutorials//issues/200>`_)
+* bump cpp20, contains and std::numbers (`#199 <https://github.com/ros/ros_tutorials//issues/199>`_)
+* use make_shared and range-for loops (`#198 <https://github.com/ros/ros_tutorials//issues/198>`_)
+* Contributors: Alejandro Hernández Cordero
 
-1.8.3 (2024-05-13)
+1.11.1 (2026-05-13)
+-------------------
+* Add icon for Lyrical Luth (`#196 <https://github.com/ros/ros_tutorials/issues/196>`_)
+* Contributors: Shane Loretz
+
+1.11.0 (2026-05-06)
+-------------------
+
+1.10.8 (2026-04-24)
+-------------------
+* Use rosdep keys that select Qt5 or Qt6 by platform (`#195 <https://github.com/ros/ros_tutorials/issues/195>`_)
+* Contributors: Shane Loretz
+
+1.10.7 (2026-03-24)
+-------------------
+* Use new ROSIDL aggregate CMake target (`#194 <https://github.com/ros/ros_tutorials/issues/194>`_)
+* Contributors: Emerson Knapp
+
+1.10.6 (2026-02-25)
+-------------------
+* Use get_package_share_path (`#193 <https://github.com/ros/ros_tutorials/issues/193>`_)
+* Contributors: Alejandro Hernández Cordero
+
+1.10.5 (2026-02-03)
+-------------------
+* fix bug loading turtle images (`#192 <https://github.com/ros/ros_tutorials//issues/192>`_)
+* Contributors: dcconner
+
+1.10.4 (2025-12-23)
+-------------------
+* Updated deprecated ament_index_cpp API (`#190 <https://github.com/ros/ros_tutorials/issues/190>`_)
+* Use qt6 as the default dependency from rosdep (`#189 <https://github.com/ros/ros_tutorials/issues/189>`_)
+* Contributors: Alejandro Hernández Cordero
+
+1.10.3 (2025-12-10)
+-------------------
+
+1.10.2 (2025-10-03)
+-------------------
+* get rid of deprecated rclcpp::spin_some() (`#183 <https://github.com/ros/ros_tutorials/issues/183>`_)
+* Contributors: Alejandro Hernández Cordero
+
+1.10.1 (2025-05-26)
+-------------------
+* Support Qt6 (`#170 <https://github.com/ros/ros_tutorials/issues/170>`_)
+* Add icon for Kilted Kaiju (`#180 <https://github.com/ros/ros_tutorials/issues/180>`_)
+* Contributors: Alejandro Hernández Cordero, Scott K Logan
+
+1.10.0 (2025-04-25)
+-------------------
+
+1.9.2 (2024-07-09)
 ------------------
-* Add icon for Jazzy. (`#167 <https://github.com/ros/ros_tutorials/issues/167>`_) (`#168 <https://github.com/ros/ros_tutorials/issues/168>`_)
-  (cherry picked from commit 014955e15a6ac3b1649cbf21e11c8547ebd47af7)
-  Co-authored-by: Marco A. Gutierrez <marcogg@marcogg.com>
-* [teleop_turtle_key] update usage string to match keys captured by keyboard (`#165 <https://github.com/ros/ros_tutorials/issues/165>`_) (`#166 <https://github.com/ros/ros_tutorials/issues/166>`_)
-  On windows it will stay uppercase but shouldn't impact users compared to
-  current situation
-  (cherry picked from commit e2853cac87f0c62db6294e5bc351e5b52fcd1ae1)
-  Co-authored-by: Mikael Arguedas <mikael.arguedas@gmail.com>
-* Contributors: mergify[bot]
+* Create turtlesim_msgs (`#169 <https://github.com/ros/ros_tutorials/issues/169>`_)
+* Contributors: Alejandro Hernández Cordero
+
+1.9.1 (2024-06-17)
+------------------
+* Add icon for Jazzy. (`#167 <https://github.com/ros/ros_tutorials/issues/167>`_)
+* [teleop_turtle_key] update usage string to match keys captured by keyboard (`#165 <https://github.com/ros/ros_tutorials/issues/165>`_)
+* Contributors: Marco A. Gutierrez, Mikael Arguedas
+
+1.9.0 (2024-04-26)
+------------------
 
 1.8.2 (2024-03-28)
 ------------------
