@@ -32,6 +32,7 @@
 
 #include <cstdlib>
 #include <ctime>
+#include <format>  // NOLINT(build/include_order)
 #include <functional>
 #include <string>
 
@@ -222,7 +223,7 @@ void TurtleFrame::parameterEventCallback(
 
 bool TurtleFrame::hasTurtle(const std::string & name)
 {
-  return turtles_.find(name) != turtles_.end();
+  return turtles_.contains(name);
 }
 
 std::string TurtleFrame::spawnTurtle(const std::string & name, float x, float y, float angle)
@@ -236,10 +237,8 @@ std::string TurtleFrame::spawnTurtle(
 {
   std::string real_name = name;
   if (real_name.empty()) {
-    do{
-      std::stringstream ss;
-      ss << "turtle" << ++id_counter_;
-      real_name = ss.str();
+    do {
+      real_name = std::format("turtle{}", ++id_counter_);
     } while (hasTurtle(real_name));
   } else {
     if (hasTurtle(real_name)) {
@@ -296,10 +295,8 @@ void TurtleFrame::paintEvent(QPaintEvent * event)
 
   painter.drawImage(QPoint(0, 0), path_image_);
 
-  M_Turtle::iterator it = turtles_.begin();
-  M_Turtle::iterator end = turtles_.end();
-  for (; it != end; ++it) {
-    it->second->paint(painter);
+  for (auto & [name, turtle] : turtles_) {
+    turtle->paint(painter);
   }
 }
 
@@ -311,10 +308,8 @@ void TurtleFrame::updateTurtles()
   }
 
   bool modified = false;
-  M_Turtle::iterator it = turtles_.begin();
-  M_Turtle::iterator end = turtles_.end();
-  for (; it != end; ++it) {
-    modified |= it->second->update(
+  for (auto & [name, turtle] : turtles_) {
+    modified |= turtle->update(
       0.001 * update_timer_->interval(), path_painter_, path_image_, width_in_meters_,
       height_in_meters_);
   }
