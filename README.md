@@ -1,3 +1,28 @@
+## ros_tutorials (rolling) - 1.11.3-1
+
+The packages in the `ros_tutorials` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling ros_tutorials` on `Fri, 04 Sep 2026 11:05:04 -0000`
+
+These packages were released:
+- `turtlesim`
+- `turtlesim_msgs`
+
+Version of package(s) in repository `ros_tutorials`:
+
+- upstream repository: https://github.com/ros/ros_tutorials.git
+- release repository: https://github.com/ros2-gbp/ros_tutorials-release.git
+- rosdistro version: `1.11.2-1`
+- old version: `1.11.2-1`
+- new version: `1.11.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## ros_tutorials (rolling) - 1.11.2-1
 
 The packages in the `ros_tutorials` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling ros_tutorials` on `Thu, 25 Jun 2026 07:46:00 -0000`
